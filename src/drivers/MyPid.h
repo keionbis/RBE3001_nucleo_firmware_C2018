@@ -22,10 +22,13 @@
 #include "RunEvery.h"
 
 // Initial values for the PID gains
+
+
 #define kp 0.005
 #define ki 0
 #define kd 0
 #define vkp 1
+
 
 #define vkd 0
 #define SENSOR_SUM 4.0
@@ -53,14 +56,15 @@ class PIDimp : public PIDBowler
   Servo * servo;                // list of servo motors
   AnalogIn * loadCell;          // list of load cells
 
-  //!FIXME is there a reason why this needs is public?
-  double gravityCompTerm = 0; 
+
+
 
   // Class private attributes
  private:
   float runningValues[(int)SENSOR_SUM];
   float runningTotal;
   int runningTotalIndex;
+  double gravityCompTerm;
 };
 
 #endif

@@ -165,8 +165,8 @@ AbsPID;
 
 class PIDBowler {
 private:
-	int velocityControllerDivisor=10;
-	int velocityControllerIndex=0;
+	int velocityControllerDivisor;
+	int velocityControllerIndex;
 	bool checkVelocityIndex(){
 		if(velocityControllerIndex++ >=velocityControllerDivisor){
 				velocityControllerIndex=0;

@@ -103,8 +103,8 @@ int main() {
       pid[i]->pidReset(pid[i]->GetPIDPosition() - homePosition[i]);
 #endif
       
-      // !FIXME Do we need the following two instructions? I'm afraid this may generate
-      // strange behaviors.
+
+      // This corrects the direction of the motor spints
       if (pid[i]->GetPIDPosition() > 3000) 
 	pid[i]->pidReset(pid[i]->GetPIDPosition() - 4095);
       
